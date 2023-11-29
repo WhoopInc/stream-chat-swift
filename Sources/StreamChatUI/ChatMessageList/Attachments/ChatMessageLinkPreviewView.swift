@@ -145,6 +145,8 @@ open class ChatMessageLinkPreviewView: _Control, ThemeProvider {
 
     override open func tintColorDidChange() {
         super.tintColorDidChange()
+
+        guard UIApplication.shared.applicationState == .active else { return }
         updateContentIfNeeded()
     }
 }
