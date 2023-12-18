@@ -344,6 +344,37 @@ lane :build_test_app_and_frameworks do
   )
 end
 
+lane :test_startup_time do |options|
+  next unless is_check_required(sources: sources_matrix[:e2e], force_check: @force_check)
+
+  prepare_simulator(device: options[:device]) if is_ci
+
+  scan(
+    project: xcode_project,
+    scheme: 'StreamChatUITestsApp',
+    testplan: 'StreamChatUITestsApp',
+    result_bundle: true,
+    derived_data_path: derived_data_path,
+    cloned_source_packages_path: source_packages_path,
+    clean: is_localhost,
+    test_without_building: options[:test_without_building],
+    xcargs: buildcache_xcargs,
+    devices: options[:device],
+    only_testing: ['StreamChatUITestsAppUITests/StartupTime/testLaunchPerformance']
+  )
+
+  sh('xcparse logs test_output/StreamChatUITestsApp.xcresult test_output/')
+  startup_time = 0
+  Dir.glob('test_output/**/action.txt').each do |file|
+    startup_time_match = File.read(file).match(/\[Duration \(AppLaunch\), s\] average: (\d+\.\d+)/)
+    if startup_time_match
+      startup_time = startup_time_match[1]
+      break
+    end
+  end
+  p startup_time
+end
+
 desc 'Runs e2e ui tests using mock server in Debug config'
 lane :test_e2e_mock do |options|
   next unless is_check_required(sources: sources_matrix[:e2e], force_check: @force_check)
