@@ -552,8 +552,7 @@
 		82E655452B067CAE00D64906 /* AssertResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E655442B067CAE00D64906 /* AssertResult.swift */; };
 		82E6554B2B067ED700D64906 /* WaitUntil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6554A2B067ED700D64906 /* WaitUntil.swift */; };
 		82EBA1842B30A65000B3A048 /* StartupTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBA1832B30A65000B3A048 /* StartupTime.swift */; };
-		82EBA1862B30AD0600B3A048 /* MessageListScrollingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBA1852B30AD0600B3A048 /* MessageListScrollingTime.swift */; };
-		82EBA1882B30AD1200B3A048 /* ChannelListScrollingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBA1872B30AD1200B3A048 /* ChannelListScrollingTime.swift */; };
+		82EBA1862B30AD0600B3A048 /* ScrollTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EBA1852B30AD0600B3A048 /* ScrollTime.swift */; };
 		82F714A12B077F3300442A74 /* XCTestCase+iOS13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F714A02B077F3300442A74 /* XCTestCase+iOS13.swift */; };
 		82F714A32B077FDE00442A74 /* XCTestCase+StressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F714A22B077FDE00442A74 /* XCTestCase+StressTest.swift */; };
 		82F714A52B07831700442A74 /* AssertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F714A42B07831700442A74 /* AssertDate.swift */; };
@@ -3205,8 +3204,8 @@
 		82E655442B067CAE00D64906 /* AssertResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertResult.swift; sourceTree = "<group>"; };
 		82E6554A2B067ED700D64906 /* WaitUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitUntil.swift; sourceTree = "<group>"; };
 		82EBA1832B30A65000B3A048 /* StartupTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartupTime.swift; path = ../../../../../../Documents/StartupTime.swift; sourceTree = "<group>"; };
-		82EBA1852B30AD0600B3A048 /* MessageListScrollingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageListScrollingTime.swift; path = ../../../../../../Documents/MessageListScrollingTime.swift; sourceTree = "<group>"; };
-		82EBA1872B30AD1200B3A048 /* ChannelListScrollingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChannelListScrollingTime.swift; path = ../../../../../../Documents/ChannelListScrollingTime.swift; sourceTree = "<group>"; };
+		82EBA1852B30AD0600B3A048 /* ScrollTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollTime.swift; path = ../../../../../../Documents/ScrollTime.swift; sourceTree = "<group>"; };
+		82EBA18A2B30C67B00B3A048 /* Performance.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Performance.xctestplan; sourceTree = "<group>"; };
 		82F714A02B077F3300442A74 /* XCTestCase+iOS13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+iOS13.swift"; sourceTree = "<group>"; };
 		82F714A22B077FDE00442A74 /* XCTestCase+StressTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+StressTest.swift"; sourceTree = "<group>"; };
 		82F714A42B07831700442A74 /* AssertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertDate.swift; sourceTree = "<group>"; };
@@ -5519,8 +5518,7 @@
 			isa = PBXGroup;
 			children = (
 				82EBA1832B30A65000B3A048 /* StartupTime.swift */,
-				82EBA1852B30AD0600B3A048 /* MessageListScrollingTime.swift */,
-				82EBA1872B30AD1200B3A048 /* ChannelListScrollingTime.swift */,
+				82EBA1852B30AD0600B3A048 /* ScrollTime.swift */,
 			);
 			path = Performance;
 			sourceTree = "<group>";
@@ -6210,6 +6208,7 @@
 			isa = PBXGroup;
 			children = (
 				8261340927F20B7A0034AC37 /* StreamChatUITestsApp.xctestplan */,
+				82EBA18A2B30C67B00B3A048 /* Performance.xctestplan */,
 				A39B040A27F196F200D6B18A /* StreamChatUITests.swift */,
 				82AD02B727D8E3DB000611B7 /* Extensions */,
 				825A32C927DBB44D000402A9 /* Pages */,
@@ -11053,7 +11052,6 @@
 			files = (
 				829CD5CC2848C8D6003C3877 /* BackendRobot.swift in Sources */,
 				82CED1C827DF492F006E967A /* ThreadPage.swift in Sources */,
-				82EBA1882B30AD1200B3A048 /* ChannelListScrollingTime.swift in Sources */,
 				8292D6DB29B78476007A17D1 /* QuotedReply_Tests.swift in Sources */,
 				8232B84F28635C4A0032C7DB /* Attachments_Tests.swift in Sources */,
 				822F266027D9FDB500E454FB /* URLProtocol_Mock.swift in Sources */,
@@ -11062,7 +11060,7 @@
 				A39B040B27F196F200D6B18A /* StreamChatUITests.swift in Sources */,
 				825A32CF27DBB48D000402A9 /* StartPage.swift in Sources */,
 				A3BEB6AF27F3235600D6D80D /* Bundle+Target.swift in Sources */,
-				82EBA1862B30AD0600B3A048 /* MessageListScrollingTime.swift in Sources */,
+				82EBA1862B30AD0600B3A048 /* ScrollTime.swift in Sources */,
 				A3AFEAA72816F1A200A79A6A /* MessageDeliveryStatus_Tests.swift in Sources */,
 				A3CB2BA02858C06B00DCAE3E /* Ephemeral_Messages_Tests.swift in Sources */,
 				822F265727D8F75D00E454FB /* UserRobot.swift in Sources */,

@@ -32,6 +32,9 @@
             reference = "container:StreamChatUITestsAppUITests/StreamChatUITestsApp.xctestplan"
             default = "YES">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:StreamChatUITestsAppUITests/Performance.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference

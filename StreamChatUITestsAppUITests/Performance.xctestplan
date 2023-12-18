@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "C5E8C61A-9DDF-426B-BE11-E9F23E40B9AB",
+      "id" : "EAB375C7-2684-48E5-B7BA-A5DE434B144D",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,18 +9,14 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
-    "targetForVariableExpansion" : {
-      "containerPath" : "container:StreamChat.xcodeproj",
-      "identifier" : "A34407B927D8C33F0044F150",
-      "name" : "StreamChatUITestsApp"
-    }
+
   },
   "testTargets" : [
     {
-      "skippedTests" : [
-        "ScrollTime",
-        "StartupTime"
+      "selectedTests" : [
+        "ScrollTime\/testChannelList()",
+        "ScrollTime\/testMessageList()",
+        "StartupTime\/testPerformance()"
       ],
       "target" : {
         "containerPath" : "container:StreamChat.xcodeproj",
