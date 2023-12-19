@@ -122,13 +122,7 @@ jobs:
     if: ${{ github.event_name != 'push' && github.event.inputs.snapshots != 'true' }}
     steps:
     - uses: actions/checkout@v3.1.0
-    - uses: actions/download-artifact@v3
-      with:
-        name: cache-derived-data
-        path: derived_data/Build/
     - uses: ./.github/actions/bootstrap
-      env:
-        INSTALL_ALLURE: true
     - run: brew install chargepoint/xcparse/xcparse
     - name: Run Performance Metrics
       run: bundle exec fastlane xcmetrics device:"${{ env.IOS_SIMULATOR_DEVICE }}" test_without_building:true
