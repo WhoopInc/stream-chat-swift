@@ -360,8 +360,7 @@ lane :xcmetrics do |options|
     cloned_source_packages_path: source_packages_path,
     clean: is_localhost,
     xcargs: buildcache_xcargs,
-    devices: options[:device],
-    test_without_building: options[:test_without_building]
+    devices: options[:device]
   )
 
   sh('xcparse logs test_output/StreamChatUITestsApp.xcresult test_output/')

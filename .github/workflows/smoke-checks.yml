@@ -23,25 +23,25 @@ env:
   IOS_SIMULATOR_DEVICE: "iPhone 14 Pro (16.4)"
 
 jobs:
-  build-test-app-and-frameworks:
-    name: Build Test App and Frameworks
-    runs-on: macos-13
-    if: ${{ github.event_name != 'push' }}
-    steps:
-    - uses: actions/checkout@v3.1.0
-    - uses: ./.github/actions/ruby-cache
-    - uses: ./.github/actions/xcode-cache
-    - name: Build
-      run: bundle exec fastlane build_test_app_and_frameworks
-      timeout-minutes: 60
-    - uses: actions/upload-artifact@v3
-      if: success()
-      with:
-        name: cache-derived-data
-        path: |
-          derived_data/Build/**/*.app
-          derived_data/Build/**/*.xctestrun
-          derived_data/Build/**/*.framework
+  # build-test-app-and-frameworks:
+  #   name: Build Test App and Frameworks
+  #   runs-on: macos-13
+  #   if: ${{ github.event_name != 'push' }}
+  #   steps:
+  #   - uses: actions/checkout@v3.1.0
+  #   - uses: ./.github/actions/ruby-cache
+  #   - uses: ./.github/actions/xcode-cache
+  #   - name: Build
+  #     run: bundle exec fastlane build_test_app_and_frameworks
+  #     timeout-minutes: 60
+  #   - uses: actions/upload-artifact@v3
+  #     if: success()
+  #     with:
+  #       name: cache-derived-data
+  #       path: |
+  #         derived_data/Build/**/*.app
+  #         derived_data/Build/**/*.xctestrun
+  #         derived_data/Build/**/*.framework
 
   # test-llc-debug:
   #   name: Test LLC (Debug)
@@ -120,8 +120,6 @@ jobs:
     name: Performance Metrics
     runs-on: macos-13
     if: ${{ github.event_name != 'push' && github.event.inputs.snapshots != 'true' }}
-    needs:
-      - build-test-app-and-frameworks
     steps:
     - uses: actions/checkout@v3.1.0
     - uses: actions/download-artifact@v3
