@@ -3203,8 +3203,8 @@
 		82E655422B067C3600D64906 /* AssertAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertAsync.swift; sourceTree = "<group>"; };
 		82E655442B067CAE00D64906 /* AssertResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertResult.swift; sourceTree = "<group>"; };
 		82E6554A2B067ED700D64906 /* WaitUntil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitUntil.swift; sourceTree = "<group>"; };
-		82EBA1832B30A65000B3A048 /* StartupTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartupTime.swift; path = ../../../../../../Documents/StartupTime.swift; sourceTree = "<group>"; };
-		82EBA1852B30AD0600B3A048 /* ScrollTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollTime.swift; path = ../../../../../../Documents/ScrollTime.swift; sourceTree = "<group>"; };
+		82EBA1832B30A65000B3A048 /* StartupTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartupTime.swift; path = StartupTime.swift; sourceTree = "<group>"; };
+		82EBA1852B30AD0600B3A048 /* ScrollTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollTime.swift; path = ScrollTime.swift; sourceTree = "<group>"; };
 		82EBA18A2B30C67B00B3A048 /* Performance.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Performance.xctestplan; sourceTree = "<group>"; };
 		82F714A02B077F3300442A74 /* XCTestCase+iOS13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+iOS13.swift"; sourceTree = "<group>"; };
 		82F714A22B077FDE00442A74 /* XCTestCase+StressTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+StressTest.swift"; sourceTree = "<group>"; };
